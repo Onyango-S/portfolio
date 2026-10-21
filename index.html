@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Onyango | Offensive Security </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            950: '#050811',
+                            900: '#0a0f1d',
+                            800: '#111827',
+                            700: '#1f293d',
+                            500: '#3b82f6',
+                            400: '#60a5fa',
+                            accent: '#00ffcc',
+                            danger: '#ff3366',
+                            warning: '#ffaa00'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .terminal-glow {
+            box-shadow: 0 0 35px rgba(0, 255, 204, 0.08);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px -10px rgba(0, 255, 204, 0.25);
+            border-color: rgba(0, 255, 204, 0.5);
+        }
+        .matrix-grid {
+            background-image: radial-gradient(rgba(0, 255, 204, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-cyber-950 text-gray-100 font-sans antialiased selection:bg-cyber-accent selection:text-cyber-950">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cyber-950/90 backdrop-blur-md border-b border-cyber-700/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <span class="hidden sm:inline-block bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent text-[10px] font-mono px-2 py-0.5 rounded ml-2">WEB &amp; NETWORK SECURITY</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium font-mono text-gray-300">
+                    <a href="#hero" class="hover:text-cyber-accent transition-colors">[01] HOME</a>
+                    <a href="#projects" class="hover:text-cyber-accent transition-colors">[02] PROJECTS</a>
+                    <a href="#certification" class="hover:text-cyber-accent transition-colors">[03] CREDENTIALS</a>
+                    <a href="#contact" class="hover:text-cyber-accent transition-colors">[04] CONTACT ME</a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/stephen-onyango/" target="_blank" rel="noopener noreferrer" class="bg-cyber-accent/10 hover:bg-cyber-accent hover:text-cyber-950 text-cyber-accent border border-cyber-accent/50 px-4 py-2 rounded text-xs font-mono font-bold tracking-wider transition-all shadow-md shadow-cyber-accent/10">
+                        <i class="fab fa-linkedin mr-2"></i>LINKEDIN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 pb-12 relative overflow-hidden bg-gradient-to-b from-cyber-950 via-cyber-900 to-cyber-950">
+        <div class="absolute inset-0 opacity-20 matrix-grid"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+           
+            
+            <h1 class="text-4xl sm:text-7xl font-black tracking-tight mb-6 text-white">
+                Offensive <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-accent via-cyber-400 to-blue-500">Security</span>
+            </h1>
+            
+            <p class="text-lg sm:text-2xl text-cyber-400 font-mono mb-8 max-w-3xl mx-auto leading-relaxed">
+                Uncovering vulnerabilities across Web Applications and Network Infrastructure through systematic offensive security testing and technical risk assessment.
+            </p>
+            
+            <!-- Recruiter Fast Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10 text-left font-mono">
+                <div class="bg-cyber-900/90 border border-cyber-700/80 p-4 rounded-xl terminal-glow">
+                    <div class="text-cyber-accent text-lg font-bold"><i class="fas fa-bug mr-2"></i>Web Security</div>
+                    <div class="text-xs text-gray-400 mt-1">VulnBank Security Assessment against OWASP Top 10 2025</div>
+                </div>
+                <div class="bg-cyber-900/90 border border-cyber-700/80 p-4 rounded-xl terminal-glow">
+                    <div class="text-cyber-accent text-lg font-bold"><i class="fas fa-wifi mr-2"></i>Wireless Network Pentest</div>
+                    <div class="text-xs text-gray-400 mt-1">WPA handshake capture, deauthentication, and offline dictionary attacks</div>
+                </div>
+                <div class="bg-cyber-900/90 border border-cyber-700/80 p-4 rounded-xl terminal-glow">
+                    <div class="text-cyber-accent text-lg font-bold"><i class="fas fa-terminal mr-2"></i>Linux CTF Lab</div>
+                    <div class="text-xs text-gray-400 mt-1">Command-line navigation, file system exploitation, and hands-on CTF lab</div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-cyber-accent hover:bg-cyber-400 text-cyber-950 font-mono font-bold px-8 py-3.5 rounded transition-all shadow-lg shadow-cyber-accent/20 flex items-center">
+                    <i class="fas fa-crosshairs mr-2"></i>VIEW PROJECTS
+                </a>
+                <a href="https://medium.com/@stephen_onyango/" target="_blank" rel="noopener noreferrer" class="bg-cyber-900 hover:bg-cyber-800 border border-cyber-700 text-gray-200 font-mono px-8 py-3.5 rounded transition-all flex items-center">
+                    <i class="fab fa-medium mr-2 text-cyber-accent"></i>MEDIUM_ARTICLES
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (ONLY THE 3 USER-SPECIFIED PROJECTS IN EXACT ORDER) -->
+    <section id="projects" class="py-24 bg-cyber-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-cyber-accent font-mono text-xs uppercase tracking-widest">[ 02. PROJECTS ]</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1 text-white">Penetration Testing &amp; Technical Writeups</h2>
+                <p class="text-gray-400 mt-2 font-mono text-sm">Hands-on security assessments and actionable remediations documented on Medium.</p>
+                <div class="w-24 h-1 bg-cyber-accent mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- PROJECT 1: VulnBank Pentest -->
+                <div class="bg-cyber-900 border border-cyber-700 rounded-xl overflow-hidden card-hover p-6 sm:p-8 terminal-glow">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 lg:max-w-3xl">
+                            <div class="flex items-center space-x-3">
+                                <span class="bg-cyber-accent/10 border border-cyber-accent/40 text-cyber-accent text-xs font-mono font-bold px-3 py-1 rounded">PROJECT #1</span>
+                                <span class="text-xs font-mono text-cyber-danger font-bold uppercase"><i class="fas fa-shield-cat mr-1"></i>Web Security</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-white font-mono">1. Testing VulnBank Against OWASP Top 10 2025</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                                Systematic offensive assessment of a Dockerized banking application against OWASP 2025 standards. The penetration test ranged from flawed access controls, unauthenticated API disclosures, stored XSS, and business logic flaws like negative fund transfers.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">OWASP Top 10 2025</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">Burp Suite Community</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">Web App Pentest</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">API Security</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">Vulnerability Assessment</span>
+                            </div>
+                        </div>
+                        <div class="flex lg:flex-col items-center justify-center shrink-0">
+                            <a href="https://medium.com/@stephen_onyango/testing-vulnbank-against-the-owasp-top-10-2025-d2414a3050fb" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-cyber-accent hover:bg-cyber-400 text-cyber-950 font-mono font-bold px-6 py-3.5 rounded text-center transition-all shadow-lg shadow-cyber-accent/20 flex items-center justify-center">
+                                READ WRITEUP <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Wifi Pentest -->
+                <div class="bg-cyber-900 border border-cyber-700 rounded-xl overflow-hidden card-hover p-6 sm:p-8 terminal-glow">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 lg:max-w-3xl">
+                            <div class="flex items-center space-x-3">
+                                <span class="bg-cyber-accent/10 border border-cyber-accent/40 text-cyber-accent text-xs font-mono font-bold px-3 py-1 rounded">PROJECT #2</span>
+                                <span class="text-xs font-mono text-cyber-400 font-bold uppercase"><i class="fas fa-wifi mr-1"></i>Wireless Network Security</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-white font-mono">2. Home Router Penetest</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                                Authorized wireless pentest evaluating router resilience against 802.11 pre-shared key(PSK) attacks. Demonstrated targeted deauthentication, WPA2 handshake capture, and offline dictionary attack using Aircrack-ng.                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                <span class="bg-cyber-800 text-cyber-400 px-3 py-1 rounded border border-cyber-700">Wireless Pentesting</span>
+                                <span class="bg-cyber-800 text-cyber-400 px-3 py-1 rounded border border-cyber-700">Aircrack-ng</span>
+                                <span class="bg-cyber-800 text-cyber-400 px-3 py-1 rounded border border-cyber-700">Network Security</span>
+                            </div>
+                        </div>
+                        <div class="flex lg:flex-col items-center justify-center shrink-0">
+                            <a href="https://medium.com/@stephen_onyango/home-router-pentest-fc2a8cfe4b25" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-cyber-accent hover:bg-cyber-400 text-cyber-950 font-mono font-bold px-6 py-3.5 rounded text-center transition-all shadow-lg shadow-cyber-accent/20 flex items-center justify-center">
+                                READ WRITEUP <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: Linux CTF -->
+                <div class="bg-cyber-900 border border-cyber-700 rounded-xl overflow-hidden card-hover p-6 sm:p-8 terminal-glow">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 lg:max-w-3xl">
+                            <div class="flex items-center space-x-3">
+                                <span class="bg-cyber-accent/10 border border-cyber-accent/40 text-cyber-accent text-xs font-mono font-bold px-3 py-1 rounded">PROJECT #3</span>
+                                <span class="text-xs font-mono text-cyber-warning font-bold uppercase"><i class="fas fa-terminal mr-1"></i>Command Line Navigation</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-white font-mono">3. Linux CTF Lab</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                                Technical walkthrough of the ALX Terminator challenge focused on Linux command line navigation, automated file system analysis, advanced process manipulation, and terminal-based troubleshooting workflows
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">Command Line Interface</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">CTF Walkthrough</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">File manipulation</span>
+                                <span class="bg-cyber-800 text-cyber-accent px-3 py-1 rounded border border-cyber-700">System Auditing</span>
+                            </div>
+                        </div>
+                        <div class="flex lg:flex-col items-center justify-center shrink-0">
+                            <a href="https://medium.com/@stephen_onyango/alx-terminator-lab-walkthrough-de195e007da8" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-cyber-accent hover:bg-cyber-400 text-cyber-950 font-mono font-bold px-6 py-3.5 rounded text-center transition-all shadow-lg shadow-cyber-accent/20 flex items-center justify-center">
+                                READ WRITEUP <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATION SECTION (ONLY SPECIFIED CREDLY BADGE) -->
+    <section id="certification" class="py-20 bg-cyber-900/50 border-t border-b border-cyber-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-cyber-accent font-mono text-xs uppercase tracking-widest">[ 03. VERIFIED CREDENTIAL ]</span>
+                <h2 class="text-3xl font-extrabold tracking-tight mt-1 text-white">Verified Security Badge</h2>
+                <div class="w-20 h-1 bg-cyber-accent mx-auto mt-3 rounded"></div>
+            </div>
+
+            <div class="bg-cyber-900 border border-cyber-700 rounded-xl p-8 card-hover terminal-glow max-w-2xl mx-auto text-center space-y-6">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-cyber-accent/10 border border-cyber-accent/40 text-cyber-accent text-3xl">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-mono text-white">Cybersecurity Practitioner</h3>
+                    <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                        Demonstrated foundational expertise in network defense, vulnerability assessment, system security, and incident analysis through rigorous practical verification.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-cyber-800">
+                    <a href="https://www.credly.com/badges/2661d349-ad92-4403-ad79-4f586a1a8f16/public_url" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-cyber-accent hover:bg-cyber-400 text-cyber-950 font-mono font-bold px-6 py-3 rounded text-sm transition-all shadow-md shadow-cyber-accent/20">
+                        VERIFY BADGE ON CREDLY <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & PROFILES SECTION -->
+    <section id="contact" class="py-24 bg-cyber-950 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-cyber-accent font-mono text-xs uppercase tracking-widest">[ 04. CONTACT ME ]</span>
+            <h2 class="text-3xl font-extrabold tracking-tight mt-1 mb-4 text-white">Ready for Offensive Security &amp; Pentest Roles</h2>
+            <p class="text-gray-300 mb-8 max-w-lg mx-auto leading-relaxed text-sm">
+                Open to Junior Penetration Tester, Security Analyst, and Offensive Security Specialist roles. Let's discuss how I can bring practical security auditing value to your team.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 font-mono">
+                <a href="https://www.linkedin.com/in/stephen-onyango/" target="_blank" rel="noopener noreferrer" class="bg-cyber-accent hover:bg-cyber-400 text-cyber-950 font-bold px-7 py-3.5 rounded flex items-center transition-all shadow-lg shadow-cyber-accent/20">
+                    <i class="fab fa-linkedin text-lg mr-2"></i>LinkedIn Profile
+                </a>
+                <a href="https://medium.com/@stephen_onyango/" target="_blank" rel="noopener noreferrer" class="bg-cyber-900 hover:bg-cyber-800 border border-cyber-700 text-gray-200 px-7 py-3.5 rounded flex items-center transition-colors">
+                    <i class="fab fa-medium text-cyber-accent text-lg mr-2"></i>Medium Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-cyber-950 border-t border-cyber-900 py-8 text-center text-xs font-mono text-gray-500">
+        <p>&copy; 2026 Stephen Onyango | Offensive Security  Practioner.</p>
+    </footer>
+
+</body>
+</html>
